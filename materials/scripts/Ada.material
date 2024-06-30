@@ -1,0 +1,14 @@
+material Wooden/Floor
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture floor-fuzzy2.jpg
+        scale 1 1
+      }
+    }
+  }
+}
