@@ -1,5 +1,6 @@
 <sdf version='1.7'>
   <world name='default'>
+
     <model name='ground_plane'>
       <static>1</static>
       <link name='link'>
@@ -273,6 +274,8 @@
       </link>
     </model>
 
+
+
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
@@ -294,6 +297,9 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
+ 
+
+
     <model name='table'>
       <static>1</static>
       <link name='link'>
@@ -2778,6 +2784,9 @@
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+
+
+    
     <model name='iris_demo'>
       <frame name='iris::__model__' attached_to='iris::base_link'>
         <pose relative_to='__model__'>0 0 0.194923 0 -0 0</pose>
@@ -3493,7 +3502,7 @@
             </friction>
           </surface>
         </collision>
-        <sensor name='camera' type='camera'>
+        <sensor name='depth_camera' type='depth'>
           <pose>0 0 0 -1.57 -1.57 0</pose>
           <camera>
             <horizontal_fov>2</horizontal_fov>
@@ -3505,26 +3514,27 @@
               <near>0.05</near>
               <far>15000</far>
             </clip>
+            <depth_camera>
+              <depth_range>
+                <min>0.1</min>
+                <max>10.0</max>
+              </depth_range>
+            </depth_camera>
           </camera>
           <always_on>1</always_on>
           <update_rate>30</update_rate>
           <visualize>1</visualize>
-          <plugin name='camera_controller' filename='libgazebo_ros_camera.so'>
+          <plugin name='depth_camera_controller' filename='libgazebo_ros_depth_camera.so'>
             <robotNamespace>roscam</robotNamespace>
             <alwaysOn>1</alwaysOn>
             <updateRate>0.0</updateRate>
-            <cameraName>cam</cameraName>
-            <imageTopicName>image_raw</imageTopicName>
-            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-            <frameName>camera_link</frameName>
-            <hackBaseline>0.07</hackBaseline>
-            <distortionK1>0.0</distortionK1>
-            <distortionK2>0.0</distortionK2>
-            <distortionK3>0.0</distortionK3>
-            <distortionT1>0.0</distortionT1>
-            <distortionT2>0.0</distortionT2>
+            <cameraName>depth_cam</cameraName>
+            <imageTopicName>depth/image_raw</imageTopicName>
+            <cameraInfoTopicName>depth/camera_info</cameraInfoTopicName>
+            <frameName>depth_camera_link</frameName>
           </plugin>
         </sensor>
+
         <pose relative_to='ros_gimbal_small_2d::__model__'>0 0 0 0 -0 0</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
