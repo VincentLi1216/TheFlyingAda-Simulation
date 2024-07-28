@@ -1,1 +1,3 @@
 Woodwn/Floor : https://ambientcg.com/view?id=Wood066
+Plaster/Wall : https://ambientcg.com/view?id=Plaster001
+PaintedWood/Wall : https://ambientcg.com/view?id=PaintedWood009C

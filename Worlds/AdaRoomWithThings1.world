@@ -86,8 +86,9 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>model://TheFlyingAda/materials/scripts</uri>
+              <uri>model://TheFlyingAda/materials/textures</uri>
+              <name>Plaster/Wall</name>
             </script>
           </material>
         </visual>
@@ -141,8 +142,9 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>model://TheFlyingAda/materials/scripts</uri>
+              <uri>model://TheFlyingAda/materials/textures</uri>
+              <name>Plaster/Wall</name>
             </script>
           </material>
         </visual>
@@ -196,8 +198,9 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>model://TheFlyingAda/materials/scripts</uri>
+              <uri>model://TheFlyingAda/materials/textures</uri>
+              <name>Plaster/Wall</name>
             </script>
           </material>
         </visual>
@@ -251,8 +254,65 @@
           </geometry>
           <material>
             <script>
-              <uri>file://../media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <uri>model://TheFlyingAda/materials/scripts</uri>
+              <uri>model://TheFlyingAda/materials/textures</uri>
+              <name>Plaster/Wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+      </link>
+      <link name='wall_5'>
+        <pose>-5 -1.75 4 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.5 10.5 7</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.5 10.5 7</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://TheFlyingAda/materials/scripts</uri>
+              <uri>model://TheFlyingAda/materials/textures</uri>
+              <name>Plaster/Wall</name>
             </script>
           </material>
         </visual>
@@ -273,6 +333,198 @@
         </inertial>
       </link>
     </model>
+    <model name='corner_room'>
+      <static>true</static>
+      
+      <link name='wall_6'>
+        <pose>4 5.3 3 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.5 3.25 7</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.5 3.25 7</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://TheFlyingAda/materials/scripts</uri>
+              <uri>model://TheFlyingAda/materials/textures</uri>
+              <name>PaintedWood/Wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+      </link>
+      
+      <link name='wall_7'>
+        <pose>6.625 1.25 3 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>5.75 0.5 7</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>5.75 0.5 7</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://TheFlyingAda/materials/scripts</uri>
+              <uri>model://TheFlyingAda/materials/textures</uri>
+              <name>PaintedWood/Wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+      </link>
+
+      <link name='wall_8'>
+        <pose>4 3 5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.5 3.125 3</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.5 3.125 3</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://TheFlyingAda/materials/scripts</uri>
+              <uri>model://TheFlyingAda/materials/textures</uri>
+              <name>PaintedWood/Wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>1</kinematic>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+      </link>
+
+      <joint name="joint_wall6_wall7" type="fixed">
+        <parent>wall_6</parent>
+        <child>wall_7</child>
+      </joint>
+
+      <joint name="joint_wall6_wall8" type="fixed">
+        <parent>wall_6</parent>
+        <child>wall_8</child>
+      </joint>
+
+      <joint name="joint_wall7_wall8" type="fixed">
+        <parent>wall_7</parent>
+        <child>wall_8</child>
+      </joint>
+    </model>
+
+
+
 
 
 

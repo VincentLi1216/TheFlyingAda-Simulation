@@ -6,9 +6,38 @@ material Wooden/Floor
     {
       texture_unit
       {
-        texture floor-fuzzy2.jpg
-        scale 1 1
+        texture floor.jpg
+        scale 0.1 0.1
       }
     }
   }
 }
+material Plaster/Wall
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture plaster-fuzzy-resize.jpg
+        scale 0.1 0.1
+      }
+    }
+  }	
+}
+material PaintedWood/Wall
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture painted_wood-fuzzy-resize.jpg
+        scale 0.1 0.1
+      }
+    }
+  }	
+}
+
