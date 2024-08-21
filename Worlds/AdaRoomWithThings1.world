@@ -3781,10 +3781,10 @@
             <alwaysOn>1</alwaysOn>
             <updateRate>10.0</updateRate>
             <cameraName>depth_cam</cameraName>
-            <imageTopicName>depth/image_raw</imageTopicName>
-            <cameraInfoTopicName>depth/camera_info</cameraInfoTopicName>
-            <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
-            <depthImageCameraInfoTopicName>/camera/depth/camera_info</depthImageCameraInfoTopicName>
+            <imageTopicName>image_raw</imageTopicName>
+            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+            <depthImageTopicName>/roscam/depth_cam/depth/image_raw</depthImageTopicName>
+            <depthImageCameraInfoTopicName>/roscam/depth_cam/depth/camera_info</depthImageCameraInfoTopicName>
             <frameName>depth_camera_link</frameName>
           </plugin>
         </sensor>
